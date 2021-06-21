@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    animation: 
+    pulse 3s ease infinite alternate, 
+    nudge 5s linear infinite alternate;
+}
+@keyframes pulse {
+    0%, 100% {
+      background-color:  rgb(223, 241, 241);
+    }
+    50% {
+      background-color: rgb(230, 233, 216);
+    }
+  }
+.header {
+    width:100%;
+    height:100%;
+    position: sticky;
+}
+.header>h3{
+    color:rgb(230, 53, 53);
+    font-size: 28px;
+
+    background-color: rgb(70, 199, 167);
+    padding:2%;
+    text-align:center;
+}
+.main{
+    display:flex;
+    
+ 
+}
+.left{
+    flex:40%;
+   margin-left: 2%;
+ 
+}
+.container{
+   
+    width: 100%;
+    margin:4%;
+    padding: 2%;
+}
+#title{
+ border:none;
+ width: 60%;
+ padding: 2%;
+ font-weight: bolder;
+ text-transform: capitalize;
+ background: transparent;
+ border-bottom:3px solid rgb(28, 136, 131);
+ font-size:20px;
+ outline: none;
+
+}
+#description{
+    margin-top:1%;
+    font-size: 15px;
+    font-family: 'Work Sans', sans-serif;
+    text-transform:capitalize;
+    outline:none;
+    font-weight: bold;
+    padding: 3%;
+}
+#btnSubmit{
+    background-color: rgb(28, 136, 131);
+    color:white;
+    width:10%;
+    height: 8%;
+    border:none;
+    outline:none;
+    font-size: 28px;
+    font-weight:bolder;
+    transform: 1 ease-in-out;
+    float:right;
+}
+#btnSubmit:hover{
+    width:13%;
+    height: 10%;
+    font-size:32px;
+    font-weight: 900;
+}
+.right{
+    flex:60%;
+    width:100%;
+    height:100%;
+    margin:3%;
+    padding:1%;
+}
+.right>.task{
+  
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    
+}
+.note{
+    margin:2%;
+    min-width:40%;
+    max-width: 45%;
+    min-height:74%;
+    background: rgb(236, 191, 196);
+box-shadow: 0 8px 32px 0 rgb(224, 224, 129);
+backdrop-filter: blur( 12.0px );
+-webkit-backdrop-filter: blur( 12.0px );
+border-radius: 15px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+
+
+#noteTitle{
+    padding: 2%;
+    margin:2%;
+    color:rgb(28, 136, 131);
+   text-transform:uppercase;
+}
+#noteDetail{
+    padding: 2%;
+    margin:2%;
+    color:rgb(143, 26, 26);
+    text-transform:capitalize;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    
+   
+}
+#delButton{
+    color:white;
+    background-color: rgb(28, 136, 131); 
+    font-weight:900;
+    width:35px;
+    height:35px;
+    border:none;
+    transition: 2s ease-in-out;
+    outline:none;
+    text-align: center;
+   justify-content: flex-end;
+   float:right;
+
+}
+#delButton:hover{
+     background-color: white;
+     width:60px;
+     color:red;
+     height:40px;
+}
+   
+@media(max-width:1200px){
+  
+   .container{
+       width:80%;
+   }
+   #title{
+      font-size:18px;
+       width:90%;
+   }
+   #description{
+       width:90%;
+       margin-top: 1%;
+       font-size:14px;
+   }
+   
+   
+    .main{
+        flex-wrap:wrap;
+       
+    }
+
+    .task{
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+    }
+    .note{
+        max-width:80%;
+        min-width:80%;
+    }
+    
+    #noteDetail{
+      padding:3%;
+      letter-spacing:1px;
+      
+  }
+}
